@@ -56,6 +56,7 @@
             this.ClearButton = new System.Windows.Forms.Button();
             this.Status = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
+            this.PathDescriptor = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // TrackLineLabel
@@ -316,11 +317,24 @@
             this.label13.TabIndex = 27;
             this.label13.Text = "Ride is over";
             // 
+            // PathDescriptor
+            // 
+            this.PathDescriptor.AutoSize = true;
+            this.PathDescriptor.Location = new System.Drawing.Point(210, 291);
+            this.PathDescriptor.Name = "PathDescriptor";
+            this.PathDescriptor.Size = new System.Drawing.Size(84, 17);
+            this.PathDescriptor.TabIndex = 28;
+            this.PathDescriptor.Text = "nothing now";
+            this.PathDescriptor.Visible = false;
+            this.PathDescriptor.Click += new System.EventHandler(this.PathDescriptor_Click);
+            this.PathDescriptor.MouseClick += new System.Windows.Forms.MouseEventHandler(this.MouseClickOnPath);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 342);
+            this.Controls.Add(this.PathDescriptor);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.Status);
             this.Controls.Add(this.ClearButton);
@@ -387,6 +401,7 @@
         private System.Windows.Forms.Button ClearButton;
         private System.Windows.Forms.TextBox Status;
         private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Label PathDescriptor;
     }
 }
 
