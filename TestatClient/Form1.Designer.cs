@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.TrackLineLabel = new System.Windows.Forms.Label();
             this.textBoxTrackLine = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.TrackTurnLeftLabel = new System.Windows.Forms.Label();
+            this.TrackTurnRightLabel = new System.Windows.Forms.Label();
+            this.TrackArcLeftLabel = new System.Windows.Forms.Label();
+            this.TrackArcRightLabel = new System.Windows.Forms.Label();
             this.textBoxTurnLeft = new System.Windows.Forms.TextBox();
             this.textBoxTurnRight = new System.Windows.Forms.TextBox();
             this.textBoxArcLeftWinkel = new System.Windows.Forms.TextBox();
@@ -54,18 +54,18 @@
             this.TrackArcRightEnter = new System.Windows.Forms.Button();
             this.sendButton = new System.Windows.Forms.Button();
             this.ClearButton = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.Status = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // label1
+            // TrackLineLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(65, 43);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(85, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "\"TrackLine \"";
+            this.TrackLineLabel.AutoSize = true;
+            this.TrackLineLabel.Location = new System.Drawing.Point(65, 43);
+            this.TrackLineLabel.Name = "TrackLineLabel";
+            this.TrackLineLabel.Size = new System.Drawing.Size(75, 17);
+            this.TrackLineLabel.TabIndex = 0;
+            this.TrackLineLabel.Text = "TrackLine:";
             // 
             // textBoxTrackLine
             // 
@@ -85,41 +85,41 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "distance in meters";
             // 
-            // label3
+            // TrackTurnLeftLabel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(65, 84);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(112, 17);
-            this.label3.TabIndex = 3;
-            this.label3.Text = "\"TrackTurnLeft \"";
+            this.TrackTurnLeftLabel.AutoSize = true;
+            this.TrackTurnLeftLabel.Location = new System.Drawing.Point(65, 84);
+            this.TrackTurnLeftLabel.Name = "TrackTurnLeftLabel";
+            this.TrackTurnLeftLabel.Size = new System.Drawing.Size(102, 17);
+            this.TrackTurnLeftLabel.TabIndex = 3;
+            this.TrackTurnLeftLabel.Text = "TrackTurnLeft:";
             // 
-            // label4
+            // TrackTurnRightLabel
             // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(65, 125);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(121, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "\"TrackTurnRight \"";
+            this.TrackTurnRightLabel.AutoSize = true;
+            this.TrackTurnRightLabel.Location = new System.Drawing.Point(65, 125);
+            this.TrackTurnRightLabel.Name = "TrackTurnRightLabel";
+            this.TrackTurnRightLabel.Size = new System.Drawing.Size(111, 17);
+            this.TrackTurnRightLabel.TabIndex = 4;
+            this.TrackTurnRightLabel.Text = "TrackTurnRight:";
             // 
-            // label5
+            // TrackArcLeftLabel
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(65, 164);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(103, 17);
-            this.label5.TabIndex = 5;
-            this.label5.Text = "\"TrackArcLeft \"";
+            this.TrackArcLeftLabel.AutoSize = true;
+            this.TrackArcLeftLabel.Location = new System.Drawing.Point(65, 164);
+            this.TrackArcLeftLabel.Name = "TrackArcLeftLabel";
+            this.TrackArcLeftLabel.Size = new System.Drawing.Size(93, 17);
+            this.TrackArcLeftLabel.TabIndex = 5;
+            this.TrackArcLeftLabel.Text = "TrackArcLeft:";
             // 
-            // label6
+            // TrackArcRightLabel
             // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(65, 201);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(112, 17);
-            this.label6.TabIndex = 6;
-            this.label6.Text = "\"TrackArcRight \"";
+            this.TrackArcRightLabel.AutoSize = true;
+            this.TrackArcRightLabel.Location = new System.Drawing.Point(65, 201);
+            this.TrackArcRightLabel.Name = "TrackArcRightLabel";
+            this.TrackArcRightLabel.Size = new System.Drawing.Size(102, 17);
+            this.TrackArcRightLabel.TabIndex = 6;
+            this.TrackArcRightLabel.Text = "TrackArcRight:";
             // 
             // textBoxTurnLeft
             // 
@@ -287,6 +287,7 @@
             this.sendButton.TabIndex = 24;
             this.sendButton.Text = "send";
             this.sendButton.UseVisualStyleBackColor = true;
+            this.sendButton.Click += new System.EventHandler(this.sendButton_Click);
             // 
             // ClearButton
             // 
@@ -296,14 +297,15 @@
             this.ClearButton.TabIndex = 25;
             this.ClearButton.Text = "clear";
             this.ClearButton.UseVisualStyleBackColor = true;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
             // 
-            // textBox1
+            // Status
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Red;
-            this.textBox1.Location = new System.Drawing.Point(68, 286);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(21, 22);
-            this.textBox1.TabIndex = 26;
+            this.Status.BackColor = System.Drawing.Color.Red;
+            this.Status.Location = new System.Drawing.Point(68, 286);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(21, 22);
+            this.Status.TabIndex = 26;
             // 
             // label13
             // 
@@ -320,7 +322,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 342);
             this.Controls.Add(this.label13);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.Status);
             this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.sendButton);
             this.Controls.Add(this.TrackArcRightEnter);
@@ -340,13 +342,14 @@
             this.Controls.Add(this.textBoxArcLeftWinkel);
             this.Controls.Add(this.textBoxTurnRight);
             this.Controls.Add(this.textBoxTurnLeft);
-            this.Controls.Add(this.label6);
-            this.Controls.Add(this.label5);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
+            this.Controls.Add(this.TrackArcRightLabel);
+            this.Controls.Add(this.TrackArcLeftLabel);
+            this.Controls.Add(this.TrackTurnRightLabel);
+            this.Controls.Add(this.TrackTurnLeftLabel);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.textBoxTrackLine);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.TrackLineLabel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -356,13 +359,13 @@
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label TrackLineLabel;
         private System.Windows.Forms.TextBox textBoxTrackLine;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label TrackTurnLeftLabel;
+        private System.Windows.Forms.Label TrackTurnRightLabel;
+        private System.Windows.Forms.Label TrackArcLeftLabel;
+        private System.Windows.Forms.Label TrackArcRightLabel;
         private System.Windows.Forms.TextBox textBoxTurnLeft;
         private System.Windows.Forms.TextBox textBoxTurnRight;
         private System.Windows.Forms.TextBox textBoxArcLeftWinkel;
@@ -382,7 +385,7 @@
         private System.Windows.Forms.Button TrackArcRightEnter;
         private System.Windows.Forms.Button sendButton;
         private System.Windows.Forms.Button ClearButton;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Status;
         private System.Windows.Forms.Label label13;
     }
 }
