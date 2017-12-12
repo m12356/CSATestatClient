@@ -16,5 +16,30 @@ namespace TestatClient
         {
             InitializeComponent();
         }
+
+        private void TrackLineEnter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrackLineLeftEnter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrackTurnRightEnter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrackArcLeftEnter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void TrackArcRightEnter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
